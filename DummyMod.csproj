@@ -11,7 +11,7 @@
         <LangVersion>11</LangVersion>
 
         <!-- These are variables we'll use inside this file -->
-        <OutDir>./$(AssemblyName)/</OutDir> <!-- where the compiled mod will be placed -->
+        <OutDir>./$(AssemblyName)/plugins/</OutDir> <!-- where the compiled mod will be placed -->
         <RWDir>$(HOME)/.local/share/Steam/steamapps/common/Rain World/</RWDir> <!-- The path where your Rain World executable is stored -->
         <LocalLibsDir>./libs/</LocalLibsDir> <!-- The path where you can put local libs. You won't need that for most projects -->
 
@@ -44,12 +44,13 @@
     "description"%3A "gescription with a g",
     "requirements"%3A [],
     "requirements_names"%3A [],
-    "checksum_override_version"%3A true
+    "checksum_override_version"%3A true,
+    "update_url"%3A "https://github.com/autodistries/dummymod/releases/latest"
   }
 
         ]]></ModinfoGeneric>
         </PropertyGroup>
-        <WriteLinesToFile Lines="$(modinfoGeneric)" File="./$(AssemblyName)/modinfo.json" WriteOnlyWhenDifferent="true" Overwrite="true" Condition="!Exists('./$(AssemblyName)/modinfo.json')" />
+        <WriteLinesToFile Lines="$(modinfoGeneric)" File="./$(AssemblyName)/modinfo.json" WriteOnlyWhenDifferent="true" Overwrite="true"  />
         <Exec command="sed -i &quot;s/\&quot;id\&quot;: \&quot;.*\&quot;/\&quot;id\&quot;: \&quot;$(PluginID)\&quot;/&quot; ./$(AssemblyName)/modinfo.json" />
         <Exec command="sed -i &quot;s/\&quot;name\&quot;: \&quot;.*\&quot;/\&quot;name\&quot;: \&quot;$(Product)\&quot;/&quot; ./$(AssemblyName)/modinfo.json" />
         <Exec command="sed -i &quot;s/\&quot;version\&quot;: \&quot;.*\&quot;/\&quot;version\&quot;: \&quot;$(Version)\&quot;/&quot; ./$(AssemblyName)/modinfo.json" />

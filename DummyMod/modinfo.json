@@ -6,5 +6,6 @@
     "description": "gescription with a g",
     "requirements": [],
     "requirements_names": [],
-    "checksum_override_version": true
+    "checksum_override_version": true,
+    "update_url": "https://github.com/autodistries/dummymod/releases/latest"
   }
