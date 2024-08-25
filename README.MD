@@ -1,0 +1,1 @@
+A dummy mod for Rain World
