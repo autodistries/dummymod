@@ -1,7 +1,7 @@
 {
     "id": "nope.dummymod",
     "name": "Dummy mod",
-    "version": "0.0.1",
+    "version": "0.0.5",
     "authors": "Nope",
     "description": "gescription with a g",
     "requirements": [],
